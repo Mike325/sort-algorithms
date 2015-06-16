@@ -20,7 +20,7 @@ using namespace std;
 
 #define STRING_COMPARE(a, b,result) {result=strcmpi(a,b);}
 
-#define BATMAN(X)   {                                                                \
+#define TIME(X)   {                                                                \
     LARGE_INTEGER t_ini, t_fin , freq;                                               \
     QueryPerformanceCounter(&t_ini);                                                 \
     X;                                                                               \
@@ -38,7 +38,7 @@ using namespace std;
 
 #define STRING_COMPARE(a, b,result) {result=strcasecmp(a,b);}
 
-#define BATMAN(X)   {                                           \
+#define TIME(X)   {                                           \
     struct timespec ts1, ts2;                                   \
     clock_gettime( CLOCK_REALTIME, &ts1 );                      \
     X;                                                          \
@@ -175,19 +175,19 @@ void seccion(int tamanio) {
 void llamarMetodos(int *listaDesordenada, vector<int> muestra , int tamanio) {
     Ordenamientos *ordenar = new Ordenamientos();
 
-    BATMAN(ordenar->burbuja(listaDesordenada, tamanio));
+    TIME(ordenar->burbuja(listaDesordenada, tamanio));
 
     ordenar->reLlenar(listaDesordenada , muestra , tamanio);
-    BATMAN(ordenar->seleccion(listaDesordenada, tamanio));
+    TIME(ordenar->seleccion(listaDesordenada, tamanio));
 
     ordenar->reLlenar(listaDesordenada , muestra , tamanio);
-    BATMAN(ordenar->insercion(listaDesordenada, tamanio));
+    TIME(ordenar->insercion(listaDesordenada, tamanio));
 
     ordenar->reLlenar(listaDesordenada , muestra , tamanio);
-    BATMAN(ordenar->shellSort(listaDesordenada, tamanio));
+    TIME(ordenar->shellSort(listaDesordenada, tamanio));
 
     ordenar->reLlenar(listaDesordenada , muestra , tamanio);
-    BATMAN(ordenar->inicioQuickSort(listaDesordenada , tamanio));
+    TIME(ordenar->inicioQuickSort(listaDesordenada , tamanio));
 
     delete ordenar;
 }
