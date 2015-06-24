@@ -1,6 +1,6 @@
 /* 
  * File:   Archivos.h
- * Author: mike
+ * Author: Miguel Ochoa Hernández
  *
  * Created on September 17, 2014, 9:36 AM
  */
