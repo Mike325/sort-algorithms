@@ -1,6 +1,6 @@
 /* 
  * File:   Ordenamientos.h
- * Author: mike
+ * Author: Miguel Ochoa Hernández
  *
  * Created on 29 de septiembre de 2014, 01:41
  */
