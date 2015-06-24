@@ -1,6 +1,6 @@
 /*
  * File:   main.cpp
- * Author: Miguel Ochoa
+ * Author: Miguel Ochoa Hernández
  *
  * Created on September 17, 2014, 9:35 AM
  */
