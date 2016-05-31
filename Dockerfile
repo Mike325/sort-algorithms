@@ -12,7 +12,8 @@ RUN mkdir /home/app && cd /home/app
 ADD sort-algorithms /home/app
 
 # run cmake script
+RUN pwd && ls
 RUN cd sort-algorithms && cmake sort-algorithms && make
 
 # Clean-up
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
