@@ -7,13 +7,13 @@ RUN apt-get update && apt-get upgrade -y && \
     #build-essentials
 
 # clone and move repo
-RUN mkdir /home/app && cd /home/app 
+RUN mkdir -p /home/app 
 #RUN git clone https://github.com/Mike325/sort-algorithms.git
 ADD sort-algorithms /home/app
 
 # run cmake script
-RUN pwd && ls
-RUN cd sort-algorithms && cmake sort-algorithms && make
+RUN pwd && ls /home
+RUN cd /home/app/sort-algorithms && cmake sort-algorithms && make
 
 # Clean-up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
