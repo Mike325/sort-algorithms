@@ -5,8 +5,6 @@
  * Created on September 17, 2014, 9:35 AM
  */
 
-using namespace std;
-
 #include <string.h>
 #include <sstream>
 #include <stdio.h>
@@ -14,13 +12,13 @@ using namespace std;
 
 #ifdef WIN32
 
-#include "Archivos.cpp"
-#include "Ordenamientos.cpp"
+#include "../include/Archivos.cpp"
+#include "../include/Ordenamientos.cpp"
 #include <windows.h>
 
 #define STRING_COMPARE(a, b,result) {result=strcmpi(a,b);}
 
-#define TIME(X)   {                                                                \
+#define TIME(X)   {                                                                  \
     LARGE_INTEGER t_ini, t_fin , freq;                                               \
     QueryPerformanceCounter(&t_ini);                                                 \
     X;                                                                               \
@@ -33,12 +31,12 @@ using namespace std;
 
 #else
 
-#include "Archivos.h"
-#include "Ordenamientos.h"
+#include "../include/Archivos.h"
+#include "../include/Ordenamientos.h"
 
 #define STRING_COMPARE(a, b,result) {result=strcasecmp(a,b);}
 
-#define TIME(X)   {                                           \
+#define TIME(X)   {                                             \
     struct timespec ts1, ts2;                                   \
     clock_gettime( CLOCK_REALTIME, &ts1 );                      \
     X;                                                          \
@@ -50,6 +48,8 @@ using namespace std;
   }
 
 #endif
+
+using namespace std;
 
 void seccion(int tamanio);
 void todo();

@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Archivos.h
  * Author: Miguel Ochoa Hernández
  *
@@ -8,12 +8,12 @@
 #ifndef ARCHIVOS_H
 #define	ARCHIVOS_H
 
-#include <cstdlib>
-#include <vector>
 #include <math.h>
-#include <fstream>
-#include <iostream>
 #include <time.h>
+#include <iostream>
+#include <cstdlib>
+#include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -22,13 +22,13 @@ public:
     Archivos();
     Archivos(const Archivos& orig);
     virtual ~Archivos();
-    
+
     void peorCaso( int &tamanio );
     void mejorCaso( int &tamanio );
     int archivosAleatorios( int &tamanio, int i);
     void leerArchivo(char nombre[], int *lista, vector<int> &muestra , register int tamanio );
-    
-    
+
+
 private:
 
 };
