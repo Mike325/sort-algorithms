@@ -3,7 +3,8 @@ MAINTAINER Mike <miguel.8a.hdez@gmail.com>
 
 # update 
 RUN apt-get update && apt-get upgrade -y && \ 
-    apt-get install -y git gcc g++ cmake build-essentials
+    apt-get install -y git gcc g++ cmake make 
+    #build-essentials
 
 # clone and move repo
 RUN mkdir /home/app && cd /home/app 
