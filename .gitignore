@@ -2,7 +2,9 @@
 .buildconfig
 
 # Generated project files
-*.txt
+aleatorio*.txt
+mejorCaso*.txt
+peorCaso*.txt
 
 # CMake
 CMakeCache.txt
