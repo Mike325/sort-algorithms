@@ -13,6 +13,7 @@ ADD sort-algorithms /home/app/sort-algorithms
 #ADD sort-algorithms/CMakeLists.txt /home/app/sort-algorithms
 
 RUN cd /home/app/sort-algorithms && ls 
+WORKDIR /home/app/sort-algorithms 
 
 # run cmake script
 RUN cmake . && make
