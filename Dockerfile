@@ -12,11 +12,10 @@ RUN mkdir -p /home/app/sort-algorithms
 ADD sort-algorithms /home/app/sort-algorithms
 #ADD sort-algorithms/CMakeLists.txt /home/app/sort-algorithms
 
-RUN cd /home/app/ && ls 
-RUN ls /home/app/sort-algorithms 
+RUN cd /home/app/sort-algorithms && ls 
 
 # run cmake script
-RUN cmake sort-algorithms && make
+RUN cmake . && make
 
 # Clean-up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
