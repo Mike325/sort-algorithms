@@ -8,9 +8,9 @@ RUN apt-get update && apt-get upgrade -y && \
 
 # clone and move repo
 RUN mkdir -p /home/app 
-RUN cd /home/app/ && ls 
 #RUN git clone https://github.com/Mike325/sort-algorithms.git
 ADD sort-algorithms /home/app
+RUN cd /home/app/ && ls 
 
 # run cmake script
 RUN cd sort-algorithms && cmake sort-algorithms && make
