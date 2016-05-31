@@ -10,8 +10,10 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN mkdir -p /home/app/sort-algorithms 
 #RUN git clone https://github.com/Mike325/sort-algorithms.git
 ADD sort-algorithms /home/app/sort-algorithms
+ADD CMakeLists.txt /home/app/sort-algorithms
 
 RUN cd /home/app/ && ls 
+RUN ls /home/app/sort-algorithms 
 
 # run cmake script
 RUN cmake sort-algorithms && make
