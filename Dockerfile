@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Mike <miguel.8a.hdez@gmail.com>
 
 # update 
-RUN apt-get update && apt-get upgrade -y && 
+RUN apt-get update && apt-get upgrade -y && \ 
     apt-get install git gcc g++ cmake build essentials
 
 # clone and move repo
